@@ -25,7 +25,7 @@ function fazerLogin() {
     <div class="form-container">
 
       <div class="mobile-brand">
-        auto<strong>Garage</strong>
+        Auto<strong>Garage</strong>
       </div>
 
       <div class="welcome">

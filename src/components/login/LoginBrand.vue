@@ -1,9 +1,14 @@
-
+<script setup lang="ts">
+import logo from '../../assets/Logo autoGarage.png'
+import logoSemEscrita from '../../assets/logo sem escrita.png'
+</script>
 <template>
   <section class="brand-panel">
     <div class="brand">
-      <div class="brand-icon">AG<span>.</span></div>
-      <span>auto<strong>Garage</strong></span>
+      <div class="brand-icon">
+        
+        <span><img src="../../assets/logo sem escrita.png" alt=""></span></div>
+      <span>Auto<strong>Garage</strong></span>
     </div>
 
     <div class="brand-content">
