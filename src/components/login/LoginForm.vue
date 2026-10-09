@@ -1,11 +1,15 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { login } from '../../services/authService'
 
-const email = ref<string>('')
-const senha = ref<string>('')
-const mostrarSenha = ref<boolean>(false)
-const erro = ref<string>('')
+const router = useRouter()
+
+const email = ref('')
+const senha = ref('')
+const mostrarSenha = ref(false)
+const erro = ref('')
 
 function fazerLogin() {
   erro.value = ''
@@ -15,9 +19,19 @@ function fazerLogin() {
     return
   }
 
-  // A autenticação será implementada futuramente.
-  erro.value = 'A autenticação ainda não foi configurada.'
+  const usuario = login(
+    email.value,
+    senha.value,
+  )
+
+  if (!usuario) {
+    erro.value = 'Usuário ou senha incorretos.'
+    return
+  }
+
+  router.push('/home')
 }
+
 </script>
 
 <template>
@@ -29,7 +43,8 @@ function fazerLogin() {
       </div>
 
       <div class="welcome">
-        <div class="welcome-icon">↗</div>
+        
+       
 
         <h2>Bem-vindo de volta!</h2>
 
@@ -56,10 +71,6 @@ function fazerLogin() {
         <div class="form-group">
           <div class="label-row">
             <label for="senha">Senha</label>
-
-            <a href="#" @click.prevent>
-              Esqueceu a senha?
-            </a>
           </div>
 
           <div class="password-field">
@@ -94,7 +105,7 @@ function fazerLogin() {
         </p>
 
         <button type="submit" class="login-button">
-          Entrar no sistema <span>→</span>
+          Entrar no sistema
         </button>
 
       </form>
@@ -109,7 +120,7 @@ function fazerLogin() {
     </div>
 
     <div class="security-note">
-      🔒 Ambiente seguro · autoGarage
+      © 2026 AutoGarage. Todos os direitos reservados.
     </div>
   </section>
 </template>

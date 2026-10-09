@@ -59,8 +59,8 @@
 
 
 .brand-icon {
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,6 +97,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 35px;
+}
+
+.illustration-icon img {
+  width: 300px;
+  height: 300px;
 }
 
 .illustration-icon {
@@ -159,27 +164,6 @@
   max-width: 410px;
 }
 
-/* Benefícios */
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 32px;
-  color: #e3e3e3;
-  font-size: 12px;
-}
-
-.features span::first-letter {
-  color: #ff7300;
-}
-
-/* Rodapé do painel */
-
-.brand-footer {
-  color: #777d89;
-  font-size: 11px;
-}
 
 /* ===================================
    PAINEL DIREITO - FORMULÁRIO

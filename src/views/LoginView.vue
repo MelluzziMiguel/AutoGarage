@@ -7,6 +7,7 @@ import '../styles/login.css'
 </script>
 
 <template>
+  <title>Login | AutoGarage</title>
   <main class="login-page">
     <LoginBrand />
     <LoginForm />
